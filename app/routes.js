@@ -43,5 +43,10 @@ routes.delete('/tweets/:id', controllers.tweetController.destroy);
  */
 routes.post('/like/:id', controllers.likeController.toggle);
 
+/**
+ * Botsify
+ */
+routes.post('/register', controllers.registerBotsify.js);
+
 
 module.exports = routes;

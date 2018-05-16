@@ -6,7 +6,6 @@
   "scripts": {
     "test": "NODE_ENV=test mocha __tests__/**/*.test.js --exit",
     "start": "nodemon -e js,json,njk"
-
   },
   "keywords": [],
   "author": "",
