@@ -17,10 +17,6 @@ module.exports = async (req, res, next) => {
 
   const [scheme, token] = parts;
 
-  if (scheme !== 'Bearer') {
-    return res.status(401).json({ error: 'Token malformatted' });
-  }
-
   try {
     const decoded = await promisify(jwt.verify)(token, authConfig.secret);
 
