@@ -45,7 +45,7 @@ UserSchema.methods = {
 
   generateToken() {
     return jwt.sign({ id: this.id }, authConfig.secret, {
-      expiresIn: 86400,
+      expiresIn: 0,
     });
   },
 };
