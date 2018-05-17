@@ -5,7 +5,7 @@ const Register = mongoose.model('Register');
 module.exports = {
   async create(req, res, next) {
     try {
-      const register = await Register.create({ content:'b' });
+      const register = await Register.create({ content: 'ba' });
       return res.json(register);
     } catch (err) {
       return next(err);
