@@ -5,7 +5,7 @@ const routes = express.Router();
 
 const controllers = requireDir('./controllers');
 
-
+const authMiddleware = require('./middlewares/auth');
 /**
  *Auth
  */
@@ -15,7 +15,7 @@ routes.post('/signin', controllers.authController.signin);
 /**
  * Auth routes
  */
-
+routes.use(authMiddleware);
 /**
  * Users
  */
