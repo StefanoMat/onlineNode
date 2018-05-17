@@ -1,10 +1,5 @@
-const envPath = process.env.NODE_ENV
-  ? `.env.${process.env.NODE_ENV}`
-  : '.env';
 
-require('dotenv').config({
-  path: envPath,
-});
+require('dotenv').config();
 const app = require('express')();
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');

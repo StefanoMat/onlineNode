@@ -1,21 +1,12 @@
 const mongoose = require('mongoose');
 
-const Tweet = mongoose.model('Tweet');
+const Register = mongoose.model('Register');
 
 module.exports = {
   async create(req, res, next) {
     try {
-      return console.log(req.body.Dia_hora);
-    } catch (err) {
-      return next(err);
-    }
-  },
-
-  async destroy(req, res, next) {
-    try {
-      await Tweet.findByIdAndRemove(req.params.id);
-
-      return res.send();
+      const register = await Register.create({ content: req.body.Dia_hora });
+      return res.json(register);
     } catch (err) {
       return next(err);
     }

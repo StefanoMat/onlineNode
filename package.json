@@ -21,7 +21,6 @@
     "jsonwebtoken": "^8.2.1",
     "mongoose": "^5.0.17",
     "nodemailer": "^4.6.4",
-    "raven": "^2.6.0",
     "require-dir": "^1.0.0"
   },
   "devDependencies": {
